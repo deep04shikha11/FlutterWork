@@ -52,8 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Flutter container"),
       ),
       body: Container(
-        width: 300,
-        height: 300,
+        width: 200,
+        height: 200,
         decoration: BoxDecoration(
           color: Colors.blue,
           border: Border.all(color: Colors.black, width: 5),
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         child: const Center(
           child: Text(
-            'Hello, Flutter!',
+            'First Container!',
             style: TextStyle(
               color: Colors.white,
               fontSize: 24,
