@@ -51,25 +51,44 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text("Flutter container"),
       ),
-      body: Container(
-        width: 200,
-        height: 200,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          border: Border.all(color: Colors.black, width: 5),
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: const Center(
-          child: Text(
-            'First Container!',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
+      body:
+          // Container(
+          //   width: 200,
+          //   height: 200,
+          //   decoration: BoxDecoration(
+          //     color: Colors.blue,
+          //     border: Border.all(color: Colors.black, width: 5),
+          //     borderRadius: BorderRadius.circular(15),
+          //   ),
+          //   child: const Center(
+          //     child: Text(
+          //       'Using Text Widget!',
+          //       style: TextStyle(
+          //         color: Colors.white,
+          //         fontSize: 24,
+          //         fontWeight: FontWeight.bold,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          // TextButton(
+          //   onPressed: () {
+          //     print("Button clicked");
+          //   },
+          //   child: const Text('Click TextButton'),
+          // ),
+          // ElevatedButton(
+          //   onPressed: () {
+          //     print("Elevated Button clicked");
+          //   },
+          //   child: const Text('Click ElevatedButton'),
+          // ),
+          OutlinedButton(
+            onPressed: () {
+              print("Outlined Button clicked");
+            },
+            child: const Text('Click OutlinedButton'),
           ),
-        ),
-      ),
     );
   }
 }
