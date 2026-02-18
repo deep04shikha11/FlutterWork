@@ -58,6 +58,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text('Inside row First', style: TextStyle(fontSize: 24)),
+                Text('Inside row Second', style: TextStyle(fontSize: 24)),
+                Text('Inside row Third', style: TextStyle(fontSize: 24)),
+              ],
+            ),
+
             Text('First', style: TextStyle(fontSize: 24)),
             Text('Second', style: TextStyle(fontSize: 24)),
             Text('Third', style: TextStyle(fontSize: 24)),
