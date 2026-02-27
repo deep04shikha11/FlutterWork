@@ -51,36 +51,66 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text("Flutter container"),
       ),
-      body: Container(
-        height: 400,
-        width: 100,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text('Inside row First', style: TextStyle(fontSize: 24)),
-                Text('Inside row Second', style: TextStyle(fontSize: 24)),
-                Text('Inside row Third', style: TextStyle(fontSize: 24)),
-              ],
+      body: Center(
+        child: InkWell(
+          onTap: () {
+            print("Container clicked");
+          },
+          onLongPress: () {
+            print("Container long pressed");
+          },
+          onDoubleTap: () {
+            print("Container double tapped");
+          },
+          child: Container(
+            width: 200,
+            height: 200,
+            color: Colors.blue,
+            child: Center(
+              child: InkWell(
+                onTap: () {
+                  print("Text clicked");
+                },
+                child: Text(
+                  'click here',
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                ),
+              ),
             ),
-
-            Text('First', style: TextStyle(fontSize: 24)),
-            Text('Second', style: TextStyle(fontSize: 24)),
-            Text('Third', style: TextStyle(fontSize: 24)),
-            Text('Fourth', style: TextStyle(fontSize: 24)),
-            Text('Fifth', style: TextStyle(fontSize: 24)),
-            ElevatedButton(
-              onPressed: () {
-                print("Button clicked");
-              },
-              child: Text('Click Me'),
-            ),
-          ],
+          ),
         ),
       ),
+      // Container(
+      //   height: 300,
+      //   width: 300,
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.start,
+      //     crossAxisAlignment: CrossAxisAlignment.start,
+      //     children: [
+      //       Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //         crossAxisAlignment: CrossAxisAlignment.center,
+      //         children: [
+      //           Text('Inside row First', style: TextStyle(fontSize: 24)),
+      //           Text('Inside row Second', style: TextStyle(fontSize: 24)),
+      //           Text('Inside row Third', style: TextStyle(fontSize: 24)),
+      //         ],
+      //       ),
+
+      //       Text('First', style: TextStyle(fontSize: 24)),
+      //       Text('Second', style: TextStyle(fontSize: 24)),
+      //       Text('Third', style: TextStyle(fontSize: 24)),
+      //       Text('Fourth', style: TextStyle(fontSize: 24)),
+      //       Text('Fifth', style: TextStyle(fontSize: 24)),
+      //       ElevatedButton(
+      //         onPressed: () {
+      //           print("Button clicked");
+      //         },
+      //         child: Text('Click Me'),
+      //       ),
+      //     ],
+      //   ),
+      // ),
       // Center(
       //   child: Container(
       //     width: 300,
