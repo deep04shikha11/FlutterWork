@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,43 +44,87 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text("Flutter container"),
       ),
-      body: Center(
-        child: InkWell(
-          onTap: () {
-            print("Container clicked");
-          },
-          onLongPress: () {
-            print("Container long pressed");
-          },
-          onDoubleTap: () {
-            print("Container double tapped");
-          },
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.blue,
-            child: Center(
-              child: InkWell(
-                onTap: () {
-                  print("Text clicked");
-                },
-                child: Text(
-                  'click here',
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 11),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.lightBlue,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.purpleAccent,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.pinkAccent,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 11),
+                height: 300,
+                width: 300,
+                color: Colors.lightGreen,
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 11),
+                height: 300,
+                width: 300,
+                color: Colors.orange,
+              ),
+            ],
           ),
         ),
       ),
+      // Center(
+      //   child: InkWell(
+      //     onTap: () {
+      //       print("Container clicked");
+      //     },
+      //     onLongPress: () {
+      //       print("Container long pressed");
+      //     },
+      //     onDoubleTap: () {
+      //       print("Container double tapped");
+      //     },
+      //     child: Container(
+      //       width: 200,
+      //       height: 200,
+      //       color: Colors.blue,
+      //       child: Center(
+      //         child: InkWell(
+      //           onTap: () {
+      //             print("Text clicked");
+      //           },
+      //           child: Text(
+      //             'click here',
+      //             style: TextStyle(fontSize: 24, color: Colors.white),
+      //           ),
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
       // Container(
       //   height: 300,
       //   width: 300,
