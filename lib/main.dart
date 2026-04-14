@@ -47,47 +47,61 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text("Flutter container"),
       ),
-      body: ListView(
+      body: ListView.builder(
+        itemCount: 5,
+        itemExtent: 20,
         scrollDirection: Axis.horizontal,
-        reverse: true,
-        children: [
-          Padding(
+        itemBuilder: (context, index) {
+          return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'One',
+              'Item $index',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Two',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Three',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Four',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Five',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-            ),
-          ),
-        ],
+          );
+        },
       ),
+      // ListView(
+      //   scrollDirection: Axis.horizontal,
+      //   reverse: true,
+      //   children: [
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text(
+      //         'One',
+      //         style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+      //       ),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text(
+      //         'Two',
+      //         style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+      //       ),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text(
+      //         'Three',
+      //         style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+      //       ),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text(
+      //         'Four',
+      //         style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+      //       ),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text(
+      //         'Five',
+      //         style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+      //       ),
+      //     ),
+      //   ],
+      // ),
       // Padding(
       //   padding: const EdgeInsets.all(8.0),
       //   child: SingleChildScrollView(
