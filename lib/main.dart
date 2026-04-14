@@ -47,16 +47,19 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text("Flutter container"),
       ),
-      body: ListView.builder(
-        itemCount: 5,
-        itemExtent: 20,
-        scrollDirection: Axis.horizontal,
+      body: ListView.separated(
+        itemCount: 10,
+        separatorBuilder: (context, index) =>
+            Divider(color: Colors.black, thickness: 9),
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Item $index',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
+          return Container(
+            height: 100,
+            color: index % 2 == 0 ? Colors.blue : Colors.green,
+            child: Center(
+              child: Text(
+                'Item ${index + 1}',
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
             ),
           );
         },
