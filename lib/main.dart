@@ -23,29 +23,25 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Dashboard')),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        color: Colors.blue.shade100,
-        child: Center(
-          child: Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-              color: Colors.blueGrey,
-              // borderRadius: BorderRadius.circular(11),
-              border: Border.all(width: 3, color: Colors.yellow.shade300),
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 15,
-                  color: Colors.red.shade400,
-                  spreadRadius: 1,
-                ),
-              ],
-              shape: BoxShape.circle,
-            ),
+      body: Column(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(height: 100, color: Colors.blue.shade300),
           ),
-        ),
+          Expanded(
+            flex: 2,
+            child: Container(height: 100, color: Colors.yellow.shade300),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(height: 100, color: Colors.red.shade300),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(height: 100, color: Colors.green.shade300),
+          ),
+        ],
       ),
     );
   }
