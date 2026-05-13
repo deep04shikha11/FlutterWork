@@ -21,21 +21,33 @@ class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
   @override
   Widget build(BuildContext context) {
+    var arrNames = [
+      'John',
+      'Jane',
+      'Doe',
+      'Smith',
+      'Alice',
+      'Bob',
+      'Charlie',
+      'David',
+      'Eve',
+      'Frank',
+    ];
+
     return Scaffold(
       appBar: AppBar(title: const Text('Dashboard')),
-      body: Container(
-        height: 100,
-        color: Colors.blue.shade300,
-        margin: const EdgeInsets.all(10),
-        child: Padding(
-          padding: const EdgeInsets.all(5),
-          child: Container(
-            color: Colors.yellow.shade300,
-            child: const Center(
-              child: Text('Margin and Padding Using EdgeInsets'),
-            ),
-          ),
-        ),
+      body: ListView.separated(
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: CircleAvatar(child: Text('${index + 1}')),
+            title: Text(arrNames[index]),
+            subtitle: const Text('Designation'),
+            trailing: const Icon(Icons.arrow_forward_ios),
+          );
+        },
+        separatorBuilder: (context, index) =>
+            const Divider(height: 10, thickness: 2, color: Colors.grey),
+        itemCount: 20,
       ),
       // Column(
       //   children: [
