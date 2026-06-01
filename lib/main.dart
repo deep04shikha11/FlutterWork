@@ -39,7 +39,16 @@ class DashboardScreen extends StatelessWidget {
       body: ListView.separated(
         itemBuilder: (context, index) {
           return ListTile(
-            leading: CircleAvatar(child: Text('${index + 1}')),
+            // leading: CircleAvatar(child: Text('${index + 1}')),
+            leading: CircleAvatar(
+              backgroundImage: AssetImage('assets/images/profile.png'),
+              backgroundColor: Colors.lightGreen.shade300,
+              maxRadius: 30,
+              child: Text(
+                arrNames[index][0],
+                style: const TextStyle(color: Colors.white),
+              ),
+            ),
             title: Text(arrNames[index]),
             subtitle: const Text('Designation'),
             trailing: const Icon(Icons.arrow_forward_ios),
