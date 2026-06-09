@@ -46,7 +46,12 @@ class DashboardScreen extends StatelessWidget {
               maxRadius: 30,
               child: Text(
                 arrNames[index][0],
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             title: Text(arrNames[index]),
